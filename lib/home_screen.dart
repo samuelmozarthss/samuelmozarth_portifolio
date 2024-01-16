@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:samuelmozarth_portifolio/my_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -48,7 +49,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     Flexible(
-                      child: Container(),
+                      child: Container(
+                        child: Row(
+                          children: [MyButton()],
+                        ),
+                      ),
                     ),
                     Row(
                       children: [
