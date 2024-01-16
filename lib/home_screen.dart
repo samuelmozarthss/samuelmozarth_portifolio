@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:samuelmozarth_portifolio/my_button.dart';
+
+import 'widgets/my_animated_menu.dart';
+import 'widgets/social_media.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<MenuItem> menuItems = [
+      MenuItem('ABOUT'),
+      MenuItem('EXPERIENCE'),
+      MenuItem('PROJECTS'),
+    ];
+
     return MaterialApp(
       title: 'Samuel Mozarth',
       debugShowCheckedModeBanner: false,
@@ -48,46 +56,19 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Flexible(
-                      child: Container(
-                        child: Row(
-                          children: [MyButton()],
-                        ),
+                    const SizedBox(
+                      height: 45,
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          MyAnimatedMenu(
+                            menuItems: menuItems,
+                          ),
+                        ],
                       ),
                     ),
-                    Row(
-                      children: [
-                        Image.asset(
-                          'assets/images/Github.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          width: 24,
-                        ),
-                        Image.asset(
-                          'assets/images/Linkedin.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          width: 24,
-                        ),
-                        Image.asset(
-                          'assets/images/Twitter.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          width: 24,
-                        ),
-                        Image.asset(
-                          'assets/images/Instagram.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                      ],
-                    )
+                    SocialMedia()
                   ],
                 ),
               ),
