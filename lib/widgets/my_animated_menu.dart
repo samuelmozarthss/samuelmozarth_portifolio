@@ -48,7 +48,7 @@ class _MyAnimatedMenuState extends State<MyAnimatedMenu> {
                 height: 1.0,
                 color: index == _activatedIndex
                     ? Colors.black
-                    : (isHoveredList[index] ? Colors.black : Colors.black45),
+                    : (isHoveredList[index] ? Colors.black87 : Colors.black45),
               ),
               const SizedBox(width: 20.0),
               Text(
@@ -60,7 +60,7 @@ class _MyAnimatedMenuState extends State<MyAnimatedMenu> {
                     color: index == _activatedIndex
                         ? Colors.black
                         : (isHoveredList[index]
-                            ? Colors.black
+                            ? Colors.black87
                             : Colors.black45),
                   ),
                 ),
