@@ -11,32 +11,32 @@ class SocialMedia extends StatelessWidget {
       children: [
         Image.asset(
           'assets/images/Github.png',
-          width: 50,
-          height: 50,
+          width: 30,
+          height: 30,
         ),
         const SizedBox(
-          width: 24,
+          width: 16,
         ),
         Image.asset(
           'assets/images/Linkedin.png',
-          width: 50,
-          height: 50,
+          width: 30,
+          height: 30,
         ),
         const SizedBox(
-          width: 24,
+          width: 16,
         ),
         Image.asset(
           'assets/images/Twitter.png',
-          width: 50,
-          height: 50,
+          width: 30,
+          height: 30,
         ),
         const SizedBox(
-          width: 24,
+          width: 16,
         ),
         Image.asset(
           'assets/images/Instagram.png',
-          width: 50,
-          height: 50,
+          width: 30,
+          height: 30,
         ),
       ],
     );

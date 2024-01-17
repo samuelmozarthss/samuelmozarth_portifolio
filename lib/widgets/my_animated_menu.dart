@@ -56,7 +56,7 @@ class _MyAnimatedMenuState extends State<MyAnimatedMenu> {
                 style: GoogleFonts.inter(
                   textStyle: TextStyle(
                     fontWeight: FontWeight.w500,
-                    fontSize: 24,
+                    fontSize: 16,
                     color: index == _activatedIndex
                         ? Colors.black
                         : (isHoveredList[index]
