@@ -479,7 +479,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'hybrid ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.w200,
+                fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
@@ -488,7 +488,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'and ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w200,
                 fontSize: 16,
               ),
             ),
@@ -497,7 +497,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'native ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.w200,
+                fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
@@ -552,7 +552,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'hybrid ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.w200,
+                fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
@@ -561,7 +561,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'and ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w200,
                 fontSize: 16,
               ),
             ),
@@ -570,7 +570,7 @@ class AboutTextInEnUS extends StatelessWidget {
             text: 'native ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.w200,
+                fontWeight: FontWeight.bold,
                 fontSize: 16,
               ),
             ),
@@ -604,7 +604,16 @@ class AboutTextInEnUS extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: 'friends, playing with my ',
+            text: 'friends',
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          TextSpan(
+            text: ', playing with my ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
                 fontWeight: FontWeight.w200,
@@ -622,7 +631,7 @@ class AboutTextInEnUS extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: ', hiking, or chasing after beautiful ',
+            text: ', hiking, or chasing after ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
                 fontWeight: FontWeight.w200,
@@ -631,7 +640,7 @@ class AboutTextInEnUS extends StatelessWidget {
             ),
           ),
           TextSpan(
-            text: 'cafes ',
+            text: 'beautiful cafes ',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
                 fontWeight: FontWeight.bold,
