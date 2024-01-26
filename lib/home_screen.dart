@@ -48,34 +48,105 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const VerticalDivider(),
-              const Expanded(
+              const Flexible(
                 flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      //AboutTextInPtBR(),
-                      //AboutTextInEnUS(),
-
-                      MyExperienceSession(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        //AboutTextInPtBR(),
+                        //AboutTextInEnUS(),
+                        SizedBox(
+                          height: 60,
+                        ),
+                        //Montreal - Experience
+                        MyExperienceSession(
+                          companyUrl: 'montreal.com.br/',
+                          experienceTitle: 'Mobile Systems Analyst',
+                          employerName:
+                              'MONTREAL INFORMATICA, Belo Horizonte, Brazil',
+                          experienceDescription:
+                              'Working on CAIXA Econômica Federal’s Mobile systems.',
+                          experienceDate: '07/22 - PRESENT',
+                          tagLinks: {
+                            'Java': 'https://www.java.com/',
+                            'Android': 'https://www.android.com/',
+                            'Git': 'https://git-scm.com/',
+                            'Azure': 'https://azure.microsoft.com/',
+                            'RobotFramework': 'https://robotframework.org/',
+                          },
+                        ),
+                        //Freelancer - Experience
+                        MyExperienceSession(
+                          companyUrl: 'samuelmozarth.com/',
+                          experienceTitle: 'Mobile Developer - Freelancer',
+                          employerName: 'FREELANCER, Brazilia, Brazil',
+                          experienceDescription:
+                              'Consulting, creation of Mobile layouts, maintenance of functions, etc.',
+                          experienceDate: '08/21 - PRESENT',
+                          tagLinks: {
+                            'Dart': 'https://dart.dev/',
+                            'Flutter': 'https://flutter.dev/',
+                            'Kotlin': 'https://kotlinlang.org/',
+                            'Java': 'https://www.java.com/',
+                            'Android': 'https://www.android.com/',
+                            'Swift': 'https://swift.org/',
+                            'iOS': 'https://www.apple.com/ios/',
+                            'Git': 'https://git-scm.com/',
+                            'GitHub': 'github.com/samuelmozarthss',
+                          },
+                        ),
+                        //EBANX - Experience
+                        MyExperienceSession(
                           companyUrl: 'ebanx.com',
                           experienceTitle: 'Mobile software engineer',
                           employerName: 'EBANX, Curitiba, Brazil',
                           experienceDescription:
                               'Working in a multidisciplinary team, in the Mobile domain, using native and hybrid tools for Android and iOS platforms, in the EBANX Go and APP JUNO applications.',
-                          experienceDate: '2018 - PRESENT',
+                          experienceDate: '03/22 - 08/22',
                           tagLinks: {
-                            'Flutter': 'https://flutter.dev/',
                             'Dart': 'https://dart.dev/',
+                            'Flutter': 'https://flutter.dev/',
                             'Kotlin': 'https://kotlinlang.org/',
-                            'Swift': 'https://swift.org/',
                             'Java': 'https://www.java.com/',
                             'Android': 'https://www.android.com/',
+                            'Swift': 'https://swift.org/',
                             'iOS': 'https://www.apple.com/ios/',
                             'Git': 'https://git-scm.com/',
-                            'GitHub': '',
-                          })
-                    ],
+                            'GitHub': 'github.com/samuelmozarthss',
+                          },
+                        ),
+                        //FeelTech - Experience
+                        MyExperienceSession(
+                          companyUrl: 'feeltechrh.com.br/',
+                          experienceTitle: 'Mentoring - Android',
+                          employerName: 'FEELTECH, Santa Catarina, Brazil',
+                          experienceDescription:
+                              'Development of native Android Mobile projects.',
+                          experienceDate: '09/21 - 02/22',
+                          tagLinks: {
+                            'Kotlin': 'https://kotlinlang.org/',
+                            'Android': 'https://www.android.com/',
+                            'Git': 'https://git-scm.com/',
+                            'GitHub': 'github.com/samuelmozarthss',
+                          },
+                        ),
+                        //Diatech - Experience
+                        MyExperienceSession(
+                          companyUrl: 'diatechsistemas.com.br/',
+                          experienceTitle: 'Support analyst',
+                          employerName: 'DIATECH SISTEMAS, Brazilia, Brazil',
+                          experienceDescription:
+                              'Maintenance of created solutions.',
+                          experienceDate: '01/19 - 08/21',
+                          tagLinks: {
+                            'Firebird': 'https://firebirdsql.org/',
+                            'Joomla': 'https://www.joomla.org/',
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

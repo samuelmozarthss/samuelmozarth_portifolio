@@ -114,16 +114,10 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
                       const SizedBox(
                         height: 12,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.black45,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Wrap(
-                          children: tagLinks,
-                          spacing: 10,
-                          runSpacing: 10,
-                        ),
+                      Wrap(
+                        children: tagLinks,
+                        spacing: 10,
+                        runSpacing: 10,
                       ),
                       const SizedBox(
                         width: 10,
@@ -168,18 +162,24 @@ class _TagLinksState extends State<TagLinks> {
           isHovered = hover;
         });
       },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 4,
-          horizontal: 8,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.black45,
+          borderRadius: BorderRadius.circular(12),
         ),
-        child: Text(
-          widget.nameTag,
-          style: GoogleFonts.inter(
-            textStyle: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 10,
-              color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 4,
+            horizontal: 8,
+          ),
+          child: Text(
+            widget.nameTag,
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 10,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
