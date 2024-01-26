@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const VerticalDivider(),
+              //const VerticalDivider(),
               const Flexible(
                 flex: 1,
                 child: SingleChildScrollView(

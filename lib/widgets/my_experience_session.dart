@@ -51,81 +51,94 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
             throw 'Could not launch ${widget.companyUrl}';
           }
         },
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 100),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color: _isHovered
-                ? Color.fromRGBO(0, 0, 0, 0.010)
-                : Colors.transparent,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.experienceDate,
-                  style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 16,
-                      color: Color.fromRGBO(0, 0, 0, 0.6),
+        child: GestureDetector(
+          onTap: () async {
+            if (await canLaunchUrl(Uri.parse(widget.companyUrl))) {
+              await launchUrlString(widget.companyUrl);
+            } else {
+              throw 'Could not launch ${widget.companyUrl}';
+            }
+          },
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 100),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: _isHovered
+                  ? Color.fromRGBO(0, 0, 0, 0.020)
+                  : Colors.transparent,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Text(
+                      widget.experienceDate,
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color.fromRGBO(0, 0, 0, 0.6),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.experienceTitle,
-                        style: GoogleFonts.inter(
-                          textStyle: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 16,
-                            color: Color.fromRGBO(0, 0, 0, 0.6),
-                          ),
-                        ),
-                      ),
-                      Text(
-                        widget.employerName,
-                        style: GoogleFonts.inter(
-                          textStyle: const TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 16,
-                            color: Color.fromRGBO(0, 0, 0, 0.6),
-                          ),
-                        ),
-                      ),
-                      Text(
-                        widget.experienceDescription,
-                        style: GoogleFonts.inter(
-                          textStyle: const TextStyle(
-                            fontWeight: FontWeight.w200,
-                            fontSize: 16,
-                            color: Color.fromRGBO(0, 0, 0, 0.6),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      Wrap(
-                        children: tagLinks,
-                        spacing: 10,
-                        runSpacing: 10,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      )
-                    ],
+                  const SizedBox(
+                    width: 20,
                   ),
-                )
-              ],
+                  Expanded(
+                    flex: 5,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.experienceTitle,
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 16,
+                              color: Color.fromRGBO(0, 0, 0, 0.6),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          widget.employerName,
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 16,
+                              color: Color.fromRGBO(0, 0, 0, 0.6),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          widget.experienceDescription,
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                              color: Color.fromRGBO(0, 0, 0, 0.6),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        Wrap(
+                          children: tagLinks,
+                          spacing: 10,
+                          runSpacing: 10,
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
