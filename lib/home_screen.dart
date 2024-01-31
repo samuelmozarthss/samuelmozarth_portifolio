@@ -60,6 +60,7 @@ class HomeScreen extends StatelessWidget {
                         SizedBox(
                           height: 60,
                         ),
+                        /*
                         //Montreal - Experience
                         MyExperienceSession(
                           companyUrl: 'montreal.com.br/',
@@ -76,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                             'Azure': 'https://azure.microsoft.com/',
                             'RobotFramework': 'https://robotframework.org/',
                           },
-                        ),
+                        ), 
                         //Freelancer - Experience
                         MyExperienceSession(
                           companyUrl: 'samuelmozarth.com/',
@@ -144,6 +145,10 @@ class HomeScreen extends StatelessWidget {
                             'Firebird': 'https://firebirdsql.org/',
                             'Joomla': 'https://www.joomla.org/',
                           },
+                        ),
+                      */
+                        SizedBox(
+                          height: 60,
                         ),
                       ],
                     ),
