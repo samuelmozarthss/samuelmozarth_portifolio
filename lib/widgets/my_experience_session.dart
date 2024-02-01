@@ -57,7 +57,7 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: _isHovered
-                ? Color.fromRGBO(0, 0, 0, 0.020)
+                ? const Color.fromRGBO(0, 0, 0, 0.020)
                 : Colors.transparent,
           ),
           child: Padding(
@@ -152,7 +152,7 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
 class ExperienceHeader extends StatefulWidget {
   final String companyUrl;
 
-  const ExperienceHeader({required this.companyUrl});
+  ExperienceHeader({required this.companyUrl});
   @override
   State<ExperienceHeader> createState() => _ExperienceHeaderState();
 }

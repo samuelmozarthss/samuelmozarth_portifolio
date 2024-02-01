@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'widgets/my_animated_menu.dart';
 import 'widgets/my_experience_session.dart';
 import 'widgets/my_strings.dart';
+import 'widgets/my_text_to_resume.dart';
 import 'widgets/social_media.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -48,16 +49,16 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               //const VerticalDivider(),
-              const Flexible(
+              Flexible(
                 flex: 1,
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
                         //AboutTextInPtBR(),
                         //AboutTextInEnUS(),
-                        SizedBox(
+                        const SizedBox(
                           height: 60,
                         ),
                         /*
@@ -147,9 +148,10 @@ class HomeScreen extends StatelessWidget {
                           },
                         ),
                       */
-                        SizedBox(
+                        const SizedBox(
                           height: 60,
                         ),
+                        OpenResume(),
                       ],
                     ),
                   ),
