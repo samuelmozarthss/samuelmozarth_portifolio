@@ -1,4 +1,8 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class SocialMedia extends StatelessWidget {
   const SocialMedia({
@@ -9,36 +13,71 @@ class SocialMedia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(
-          'assets/images/Github.png',
-          width: 30,
-          height: 30,
+        ClickableImage(
+          imagePath: 'assets/images/Github.png',
+          url: 'https://github.com/samuelmozarthss',
         ),
         const SizedBox(
           width: 16,
         ),
-        Image.asset(
-          'assets/images/Linkedin.png',
-          width: 30,
-          height: 30,
+        ClickableImage(
+          imagePath: 'assets/images/Linkedin.png',
+          url: 'https://br.linkedin.com/in/samuelmozarth',
         ),
         const SizedBox(
           width: 16,
         ),
-        Image.asset(
-          'assets/images/Twitter.png',
-          width: 30,
-          height: 30,
+        ClickableImage(
+          imagePath: 'assets/images/Twitter.png',
+          url: 'https://twitter.com/osamuelmozarth',
         ),
         const SizedBox(
           width: 16,
         ),
-        Image.asset(
-          'assets/images/Instagram.png',
-          width: 30,
-          height: 30,
+        ClickableImage(
+          imagePath: 'assets/images/Instagram.png',
+          url: 'https://instagram.com/samuelmozarth',
         ),
       ],
+    );
+  }
+}
+
+class ClickableImage extends StatefulWidget {
+  final String imagePath;
+  final String url;
+
+  ClickableImage({required this.imagePath, required this.url});
+
+  @override
+  State<ClickableImage> createState() => _ClickableImageState();
+}
+
+class _ClickableImageState extends State<ClickableImage> {
+  bool _isHovered = false;
+
+  void _launchURL() async {
+    if (await canLaunchUrl(Uri.parse(widget.url.toString()))) {
+      await launchUrlString(widget.url);
+    } else {
+      throw 'Could not launch ${widget.url}';
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (event) => setState(() => _isHovered = true),
+      onExit: (event) => setState(() => _isHovered = false),
+      child: GestureDetector(
+        onTap: _launchURL,
+        child: Image.asset(
+          widget.imagePath,
+          color: _isHovered ? Colors.black54 : null,
+          width: 30,
+          height: 30,
+        ),
+      ),
     );
   }
 }
