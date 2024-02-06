@@ -49,21 +49,23 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               //const VerticalDivider(),
-              Flexible(
+              const Flexible(
                 flex: 1,
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Column(
                       children: [
+                        /*
                         //AboutTextInPtBR(),
-                        //AboutTextInEnUS(),
-                        const SizedBox(
+                        AboutTextInEnUS(),
+                         SizedBox(
                           height: 60,
                         ),
-                        /*
+
+                        
                         //Montreal - Experience
-                        MyExperienceSession(
+                        const MyExperienceSession(
                           companyUrl: 'montreal.com.br/',
                           experienceTitle: 'Mobile Systems Analyst',
                           employerName:
@@ -78,7 +80,8 @@ class HomeScreen extends StatelessWidget {
                             'Azure': 'https://azure.microsoft.com/',
                             'RobotFramework': 'https://robotframework.org/',
                           },
-                        ), 
+                        ),
+                        
                         //Freelancer - Experience
                         MyExperienceSession(
                           companyUrl: 'samuelmozarth.com/',
@@ -147,11 +150,16 @@ class HomeScreen extends StatelessWidget {
                             'Joomla': 'https://www.joomla.org/',
                           },
                         ),
-                      */
+                        
+
                         const SizedBox(
                           height: 60,
                         ),
-                        OpenResume(),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: OpenResume(),
+                        ),
+                        */
                       ],
                     ),
                   ),

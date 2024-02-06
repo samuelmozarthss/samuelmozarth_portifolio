@@ -88,21 +88,9 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
                     children: [
                       Row(
                         children: [
-                          Text(
-                            widget.experienceTitle,
-                            style: GoogleFonts.inter(
-                              textStyle: const TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 16,
-                                color: Color.fromRGBO(0, 0, 0, 0.6),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10,
-                          ),
                           ExperienceHeader(
                             companyUrl: widget.companyUrl,
+                            experienceTitle: widget.experienceTitle,
                           ),
                         ],
                       ),
@@ -151,8 +139,9 @@ class _MyExperienceSessionState extends State<MyExperienceSession> {
 
 class ExperienceHeader extends StatefulWidget {
   final String companyUrl;
+  final String experienceTitle;
 
-  ExperienceHeader({required this.companyUrl});
+  ExperienceHeader({required this.companyUrl, required this.experienceTitle});
   @override
   State<ExperienceHeader> createState() => _ExperienceHeaderState();
 }
@@ -162,7 +151,15 @@ class _ExperienceHeaderState extends State<ExperienceHeader> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
+    return GestureDetector(
+      onTap: () async {
+        if (await canLaunchUrl(Uri.parse(widget.companyUrl))) {
+          await launchUrlString(widget.companyUrl);
+        } else {
+          throw 'Could not launch ${widget.companyUrl}';
+        }
+      },
+      child: MouseRegion(
         onEnter: (PointerEnterEvent event) {
           setState(() {
             iconSize = 15;
@@ -173,18 +170,29 @@ class _ExperienceHeaderState extends State<ExperienceHeader> {
             iconSize = 10;
           });
         },
-        child: GestureDetector(
-            onTap: () async {
-              if (await canLaunchUrl(Uri.parse(widget.companyUrl))) {
-                await launchUrlString(widget.companyUrl);
-              } else {
-                throw 'Could not launch ${widget.companyUrl}';
-              }
-            },
-            child: Icon(
+        child: Row(
+          children: [
+            Text(
+              widget.experienceTitle,
+              style: GoogleFonts.inter(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 16,
+                  color: Color.fromRGBO(0, 0, 0, 0.6),
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Icon(
               Icons.arrow_outward,
               size: iconSize,
-            )));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
