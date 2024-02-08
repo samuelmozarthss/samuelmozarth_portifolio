@@ -141,7 +141,8 @@ class ExperienceHeader extends StatefulWidget {
   final String companyUrl;
   final String experienceTitle;
 
-  ExperienceHeader({required this.companyUrl, required this.experienceTitle});
+  const ExperienceHeader(
+      {super.key, required this.companyUrl, required this.experienceTitle});
   @override
   State<ExperienceHeader> createState() => _ExperienceHeaderState();
 }
@@ -200,7 +201,7 @@ class TagLinks extends StatefulWidget {
   final String nameTag;
   final String url;
 
-  TagLinks({required this.nameTag, required this.url});
+  const TagLinks({super.key, required this.nameTag, required this.url});
 
   @override
   _TagLinksState createState() => _TagLinksState();

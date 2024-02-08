@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/my_animated_menu.dart';
 import 'widgets/my_experience_session.dart';
+import 'widgets/my_projects_session.dart';
 import 'widgets/my_strings.dart';
 import 'widgets/my_text_to_resume.dart';
 import 'widgets/social_media.dart';
@@ -160,6 +161,7 @@ class HomeScreen extends StatelessWidget {
                           child: OpenResume(),
                         ),
                         */
+                        MyProjectsSession(),
                       ],
                     ),
                   ),
