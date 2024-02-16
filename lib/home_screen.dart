@@ -57,16 +57,15 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        /*
+                        ///*
                         //AboutTextInPtBR(),
                         AboutTextInEnUS(),
-                         SizedBox(
+                        SizedBox(
                           height: 60,
                         ),
 
-                        
                         //Montreal - Experience
-                        const MyExperienceSession(
+                        MyExperienceSession(
                           companyUrl: 'montreal.com.br/',
                           experienceTitle: 'Mobile Systems Analyst',
                           employerName:
@@ -82,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                             'RobotFramework': 'https://robotframework.org/',
                           },
                         ),
-                        
+
                         //Freelancer - Experience
                         MyExperienceSession(
                           companyUrl: 'samuelmozarth.com/',
@@ -151,16 +150,15 @@ class HomeScreen extends StatelessWidget {
                             'Joomla': 'https://www.joomla.org/',
                           },
                         ),
-                        
 
-                        const SizedBox(
+                        SizedBox(
                           height: 60,
                         ),
                         Align(
                           alignment: Alignment.centerLeft,
                           child: OpenResume(),
                         ),
-                        */
+                        //*/
                         MyProjectsSession(),
                       ],
                     ),

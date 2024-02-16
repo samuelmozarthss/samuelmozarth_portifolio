@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class OpenResume extends StatelessWidget {
+  const OpenResume({super.key});
+
   void downloadFile() {
     final anchor = AnchorElement(
       href: 'files/resume.pdf',

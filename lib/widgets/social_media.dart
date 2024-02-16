@@ -9,27 +9,27 @@ class SocialMedia extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         ClickableImage(
           imagePath: 'assets/images/Github.png',
           url: 'https://github.com/samuelmozarthss',
         ),
-        const SizedBox(
+        SizedBox(
           width: 16,
         ),
         ClickableImage(
           imagePath: 'assets/images/Linkedin.png',
           url: 'https://br.linkedin.com/in/samuelmozarth',
         ),
-        const SizedBox(
+        SizedBox(
           width: 16,
         ),
         ClickableImage(
           imagePath: 'assets/images/Twitter.png',
           url: 'https://twitter.com/osamuelmozarth',
         ),
-        const SizedBox(
+        SizedBox(
           width: 16,
         ),
         ClickableImage(
@@ -45,7 +45,7 @@ class ClickableImage extends StatefulWidget {
   final String imagePath;
   final String url;
 
-  ClickableImage({required this.imagePath, required this.url});
+  const ClickableImage({super.key, required this.imagePath, required this.url});
 
   @override
   State<ClickableImage> createState() => _ClickableImageState();

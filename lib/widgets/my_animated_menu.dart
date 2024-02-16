@@ -10,7 +10,7 @@ class MenuItem {
 class MyAnimatedMenu extends StatefulWidget {
   final List<MenuItem> menuItems;
 
-  MyAnimatedMenu({required this.menuItems});
+  const MyAnimatedMenu({super.key, required this.menuItems});
 
   @override
   _MyAnimatedMenuState createState() => _MyAnimatedMenuState();
@@ -26,7 +26,8 @@ class _MyAnimatedMenuState extends State<MyAnimatedMenu> {
       children: List.generate(
         widget.menuItems.length,
         (index) => InkWell(
-          overlayColor: MaterialStateColor.resolveWith((states) => Color(0)),
+          overlayColor:
+              MaterialStateColor.resolveWith((states) => const Color(0)),
           onHover: (hover) {
             setState(() {
               isHoveredList[index] = hover;

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -152,46 +153,45 @@ class _ExperienceHeaderState extends State<ExperienceHeader> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () async {
-        if (await canLaunchUrl(Uri.parse(widget.companyUrl))) {
-          await launchUrlString(widget.companyUrl);
-        } else {
-          throw 'Could not launch ${widget.companyUrl}';
-        }
+    return MouseRegion(
+      onEnter: (PointerEnterEvent event) {
+        setState(() {
+          iconSize = 15;
+        });
       },
-      child: MouseRegion(
-        onEnter: (PointerEnterEvent event) {
-          setState(() {
-            iconSize = 15;
-          });
-        },
-        onExit: (PointerExitEvent event) {
-          setState(() {
-            iconSize = 10;
-          });
-        },
-        child: Row(
-          children: [
-            Text(
-              widget.experienceTitle,
-              style: GoogleFonts.inter(
-                textStyle: const TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 16,
-                  color: Color.fromRGBO(0, 0, 0, 0.6),
-                ),
+      onExit: (PointerExitEvent event) {
+        setState(() {
+          iconSize = 10;
+        });
+      },
+      child: Row(
+        children: [
+          Text(
+            widget.experienceTitle,
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: 16,
+                color: Color.fromRGBO(0, 0, 0, 0.6),
               ),
             ),
-            const SizedBox(
-              width: 10,
-            ),
-            Icon(
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+          GestureDetector(
+            onTap: () {
+              if (kDebugMode) {
+                print('companyUrl: ${widget.companyUrl}');
+              }
+              openUrl(widget.companyUrl);
+            },
+            child: Icon(
               Icons.arrow_outward,
               size: iconSize,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -249,4 +249,11 @@ class _TagLinksState extends State<TagLinks> {
       ),
     );
   }
+}
+
+void openUrl(String url) async {
+  if (!url.startsWith('http://') && !url.startsWith('http://www.')) {
+    url = 'http://www.' + url;
+  }
+  await launch(url);
 }
