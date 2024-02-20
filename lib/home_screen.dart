@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              //const VerticalDivider(),
+              const VerticalDivider(),
               const Flexible(
                 flex: 1,
                 child: SingleChildScrollView(
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       children: [
-                        ///*
+                        /*
                         //AboutTextInPtBR(),
                         AboutTextInEnUS(),
                         SizedBox(
@@ -158,8 +158,10 @@ class HomeScreen extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: OpenResume(),
                         ),
-                        //*/
-                        MyProjectsSession(),
+                        */
+                        MyProjectsSession(tagLinks: {
+                          'Dart': 'https://dart.dev/',
+                        }),
                       ],
                     ),
                   ),
