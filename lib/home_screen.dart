@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets/my_animated_menu.dart';
 import 'widgets/my_experience_session.dart';
@@ -162,6 +163,10 @@ class HomeScreen extends StatelessWidget {
                         MyProjectsSession(tagLinks: {
                           '<3': 'https://dart.dev/',
                         }),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        MyFooterSessionEn()
                       ],
                     ),
                   ),

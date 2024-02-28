@@ -107,7 +107,131 @@ class _MyProjectsSessionState extends State<MyProjectsSession> {
                     }).toList(),
                   ),
                   const SizedBox(
-                    width: 10,
+                    height: 50,
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      style: DefaultTextStyle.of(context).style,
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Designed in ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Figma ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Vand coded in ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Visual Studio Code',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ', based on examples available on ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Dribbble',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: '. Developed with ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Flutter web',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ', deployed with ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Vercel',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: '. All text is set in ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Inter ',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'font.',
+                          style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
