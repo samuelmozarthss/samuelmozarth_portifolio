@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'my_taglinks.dart';
+
 class MyProjectsSession extends StatefulWidget {
   const MyProjectsSession({super.key, required this.tagLinks});
   final Map<String, String> tagLinks;
@@ -75,9 +77,34 @@ class _MyProjectsSessionState extends State<MyProjectsSession> {
                   const SizedBox(
                     height: 12,
                   ),
-                  const Wrap(
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.star,
+                        size: 16,
+                        color: Colors.amber,
+                      ),
+                      Text(
+                        '1.142',
+                        style: GoogleFonts.inter(
+                          textStyle: const TextStyle(
+                            fontWeight: FontWeight.w200,
+                            fontSize: 16,
+                            color: Color.fromRGBO(0, 0, 0, 0.6),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Wrap(
                     spacing: 10,
                     runSpacing: 10,
+                    children: widget.tagLinks.entries.map((entry) {
+                      return TagLinks(nameTag: entry.key, url: entry.value);
+                    }).toList(),
                   ),
                   const SizedBox(
                     width: 10,

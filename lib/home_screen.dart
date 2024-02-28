@@ -160,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         */
                         MyProjectsSession(tagLinks: {
-                          'Dart': 'https://dart.dev/',
+                          '<3': 'https://dart.dev/',
                         }),
                       ],
                     ),
